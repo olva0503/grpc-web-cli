@@ -1,0 +1,14 @@
+# Get a user by ID
+GRPC http://localhost:8080/api/grpc
+Service: example.UserService
+Method: GetUser
+Protocol: grpc-web
+Timeout: 30s
+
+# Optional headers
+Authorization: Bearer your-token-here
+
+# Request body
+{
+  "user_id": "123"
+}

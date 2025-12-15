@@ -1,0 +1,23 @@
+GRPC http://localhost:8080
+Service: example.UserService
+Method: CreateUser
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+
+[Captures]
+user_id: id
+user_email: email
+
+---
+
+GRPC http://localhost:8080
+Service: example.UserService
+Method: GetUser
+Authorization: Bearer {{user_id}}
+
+{
+  "id": "{{user_id}}"
+}

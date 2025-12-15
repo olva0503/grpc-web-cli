@@ -1,0 +1,11 @@
+# Create a new user
+GRPC http://localhost:8080/api/grpc
+Service: example.UserService
+Method: CreateUser
+Protocol: grpc-web
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 30
+}
